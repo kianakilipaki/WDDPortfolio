@@ -1,15 +1,14 @@
 // create array
 const links = [
-    {
-      label: "Week1 notes",
-      url: "week1/index.html"
-    }
-  ]
+  {
+    label: "Week1 notes",
+    url: "week1/index.html"
+  }
+]
 
-// fill list with array links
-document.getElementById("link-list").innerHTML = links.forEach(myFunction);
-
-function myFunction() {
-  return "<li><a href='" + links.url + "' >" + links.label + "</a></li>";
-} 
-
+// fill list with array items
+var list;
+links.forEach(link => {
+  list = "<a href='" + link['url'] + "' ><li>" + link['label'] + "</li></a>";
+});
+document.getElementById("link-list").innerHTML = list;
