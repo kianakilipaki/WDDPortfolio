@@ -9,6 +9,6 @@ const links = [
 // fill list with array items
 var list;
 links.forEach(link => {
-  list = "<a href='" + link['url'] + "' ><li>" + link['label'] + "</li></a>";
+  list = "<li><a href='" + link['url'] + "' >" + link['label'] + "</a></li>";
 });
 document.getElementById("link-list").innerHTML = list;
