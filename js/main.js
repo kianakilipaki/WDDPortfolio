@@ -1,7 +1,7 @@
 // create array
 const links = [
   {
-    label: "Week1 notes",
+    label: "Week1 Notes",
     url: "assignments/week1/story_editor.html"
   }
 ]
