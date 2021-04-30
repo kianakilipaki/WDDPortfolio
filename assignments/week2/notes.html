@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 2 Notes</title>
+    </head>
+
+    <body>
+        <h1>Javascript Review</h1>
+        <h3>Data types</h3>
+        typeof 'hello'
+        // 'string'
+        typeof 10
+        // 'number'
+        typeof true
+        // 'boolean'
+        typeof { ninja: 'turtle' }
+        // 'object'
+        typeof [ 1, 2, 3 ]
+        // 'object' (All non-primitive data types return a type of 'object'.)
+
+        <h3>Reserved words</h3>
+        abstract, await, boolean, break, byte, case, catch, char, class, const, continue, debugger, default, delete, do,
+        double, else, enum, export, extends, false, final, finally, float, for, function, goto, if, implements, import,
+        in instanceof, int, interface, let, long, native, new, null, package, private, protected, public, return, short,
+        static, super, switch, synchronized, this, throw, throws, transient, true, try, typeof, var, volatile, void,
+        while, with, yield
+
+        <h4>script examples in console.</h4>
+
+        <div id="array"></div>
+        <script>
+            const message = 'Hello World!'
+            //alert(message)
+
+            const age = 39;
+            console.log(`I will be ${ age + 1 } next year`);
+
+            const PI = 3.14159;
+            console.log(PI.toFixed(3));
+
+            console.log(2.459.toPrecision(2));
+
+            let avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk'];
+            avengers.pop();
+            document.getElementById('array').innerHTML = avengers;
+            avengers = avengers.concat(['Hulk', 'Hawkeye', 'Black Widow']);
+            document.getElementById('array').innerHTML = avengers.join(", ");
+
+            const n = 5;
+            n % 2 === 0 ? console.log('n is an even number') : console.log('n is an odd number');
+
+            let number = 4;
+            switch (number) {
+                case 4:
+                    console.log('You rolled a four');
+                    break;
+                case 5:
+                    console.log('You rolled a five');
+                    break;
+                case 6:
+                    console.log('You rolled a six');
+                    break;
+                default:
+                    console.log('You rolled a number less than four');
+                    break;
+            }
+
+            for (let i = 0, max = avengers.length; i < max; i++) {
+                console.log(avengers[i]);
+            }
+
+            function hello() {
+                console.log('Hello World!');
+            }
+
+            const goodbye = function () {
+                console.log('Goodbye World!');
+            };
+            const goodbye1 = function bye() {
+                console.log('Goodbye World!');
+            };
+
+            const hi = new Function('console.log("Hi World!");');
+
+            function rest(...args) {
+                for (arg of args) {
+                    console.log(arg);
+                }
+            }
+            rest(2, 4, 6, 8);
+
+            const hello1 = () => alert('Hello World!');
+
+            const tax = (salary) => {
+                const taxable = salary - 8000;
+                const lowerRate = 0.25 * taxable;
+                taxable = taxable - 20000;
+                const higherRate = 0.4 * taxable;
+                return lowerRate + higherRate;
+            }
+
+            const colors = ['Red', 'Green', 'Blue']
+            for (let i = 0, max = colors.length; i < max; i++) {
+                console.log(`Color at position ${i} is ${colors[i]}`);
+            }
+            colors.forEach((color, index) =>
+                console.log(`Color at position ${index}  is ${color}`));
+        </script>
+    </body>
+
+</html>
