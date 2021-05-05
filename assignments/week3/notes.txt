@@ -1,0 +1,65 @@
+Chapter 5 - Objects
+
+Objects are a collection of key-value pairs placed inside curly braces {}.
+
+Objects have properties that can be any JavaScript value. If it’s a function, it’s known as amethod.
+
+An object’s properties and methods can be accessed using either dot notation or square bracket notation.
+
+Objects are mutable, which means their properties and methods can be changed or removed.
+
+Objects can be used as parameters to functions, which allows arguments to be entered in any order, or omitted.
+
+Nested objects can be created by placing objects inside objects.
+
+JSON is a portable data format that uses JavaScript object literals to exchange information.
+
+The Math object gives access to a number of mathematical constants.
+
+The Math object can be used to perform mathematical calculations.
+
+The Date object can be used to create date objects.
+
+Once you’ve created a Date object, you can use the getter methods to access information about that date.
+
+Once you’ve created a Date object, setter methods can be used to change information about that date.
+
+The Regex object can be used to create regular expressions.
+
+Chapter 6 - DOM
+
+The Document Object Model is a way of representing a page of HTML as a tree of nodes.
+
+The document.getElementById() , document.getElementsByClassName() , document.getElementsByTagNames() and document.querySelector() can be used to access elements on a page.
+
+The parentNode() , previousSibling() , nextSibling() , childNodes() and children() methods can be used to navigate around the DOM tree.
+
+An element’s attributes can be accessed using the getAttribute() method, and updated using the setAttribute() method.
+
+The createElement() and createTextNode() methods can be used to create dynamic markup on the fly.
+
+Markup can be added to the page using the appendChild() and insertBefore() methods.
+
+Elements can be replaced using the replaceChild() method, and removed using the removeChild() method.
+
+The innerHTML property can be used to insert raw HTML directly into the DOM.
+
+The CSS properties of an element can be changed by accessing the style property.
+
+Chapter 7 - Events
+
+Events occur when a user interacts with a web page.
+
+An event listener is attached to an element, then invokes a callback function when the event occurs.
+
+The event object is passed to the callback function as an argument, and contains lots of properties and methods relating to the event.
+
+There are many types of event, including mouse events, keyboard events, and touch events.
+
+You can remove an event using the removeEventListener method.
+
+The default behavior of elements can be prevented using the preventDefault() function.
+
+Event propagation is the order the events fire on each element.
+
+Event delegation is when an event listener is added to a parent element to capture events that happen to its children elements.
