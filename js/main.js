@@ -19,6 +19,14 @@ const links = [{
     label: "Quiz Ninja",
     url: "assignments/week3/quiz_ninja.html"
   },
+  {
+    label: "Week4 Notes",
+    url: "assignments/week4/notes.txt"
+  },
+  {
+    label: "Tic-Tac-Toe",
+    url: "assignments/week4/tic-tact-toe.html"
+  },
 ]
 
 // fill list with array items
