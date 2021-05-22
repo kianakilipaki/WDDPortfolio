@@ -1,0 +1,43 @@
+#main-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(194, 211, 243);
+  border: 2px solid darkgrey;
+  border-radius: 5px;
+}
+h1 {
+  color: rgb(117, 12, 100);
+}
+#footer > button {
+  border: none;
+  background-color: inherit;
+  padding: 0 5px;
+  margin: 8px 1px;
+}
+#footer > button:hover {
+  color: rgb(117, 12, 100);
+}
+#footer > button:active {
+  border: 1px solid rgb(117, 12, 100);
+  border-radius: 3px;
+  color: rgb(117, 12, 100);
+}
+label {
+  padding: 5px;
+  display: flex;
+}
+#addTask {
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+#btn {
+  border-radius: 5px;
+  background-color: rgb(117, 12, 100);
+  font-size: 2em;
+  color: white;
+}
