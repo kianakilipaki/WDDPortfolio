@@ -2,7 +2,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   margin: 0 auto;
-  width: 400px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   background-color: rgb(194, 211, 243);
@@ -40,4 +40,10 @@ label {
   background-color: rgb(117, 12, 100);
   font-size: 2em;
   color: white;
+}
+
+@media only screen and (min-width: 600px) {
+  #main-container {
+    width: 400px;
+  }
 }
