@@ -1,0 +1,73 @@
+#main-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(194, 211, 243);
+  border: 2px solid darkgrey;
+  border-radius: 5px;
+}
+h1 {
+  color: rgb(117, 12, 100);
+}
+#footer > button {
+  border: none;
+  background-color: inherit;
+  padding: 0 5px;
+  margin: 8px 1px;
+}
+#footer > button:hover {
+  color: rgb(117, 12, 100);
+}
+#footer > button:active {
+  border: 1px solid rgb(117, 12, 100);
+  border-radius: 3px;
+  color: rgb(117, 12, 100);
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  background-color: white;
+  margin: 7px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 8px 6px -6px rgb(84, 91, 100);
+  text-align: left;
+  list-style: none;
+}
+#addTask {
+  padding: 5px;
+  width: 97%;
+  display: flex;
+}
+#addTask input {
+  width: 100%;
+  border-radius: 5px;
+}
+#btn {
+  border-radius: 5px;
+  background-color: rgb(117, 12, 100);
+  font-size: 2em;
+  color: white;
+}
+.del {
+  background-color: inherit;
+  color: red;
+  border: none;
+  float: right;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 600px) {
+  #main-container {
+    width: 400px;
+  }
+}
