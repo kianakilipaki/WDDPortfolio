@@ -17,18 +17,22 @@ filter.addEventListener("click", filterTodo);
 function addTodo(event) {
   event.preventDefault();
   var todo = {
-    id: todos.length + 1,
+    id: Date.now(),
     text: task.value,
     complete: false,
   };
 
   todos = addToLs(todo);
   task.value = "";
+  displayTodo(todos);
+}
+
+function displayTodo(todos) {
   list.innerHTML = "";
   todos.forEach(renderTodo);
 }
 
 // load todo list to start
-window.addEventListener("load", () => {
-  todos.forEach(renderTodo);
+document.addEventListener("load", () => {
+  displayTodo(todos);
 });

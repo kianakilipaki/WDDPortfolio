@@ -3,7 +3,6 @@ export default function filterTodo(event) {
   const list = document.getElementById("lists");
   const todos = list.childNodes;
   todos.forEach((todo) => {
-    console.log(todo);
     if (event.target.id === "active") {
       if (todo.classList.contains("completed")) {
         todo.style.display = "none";
