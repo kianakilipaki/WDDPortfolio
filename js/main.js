@@ -44,6 +44,14 @@ const links = [
     label: "ToDo list finished",
     url: "assignments/week6/todoApp/index.html",
   },
+  {
+    label: "Week7 Notes",
+    url: "assignments/week7/notes.txt",
+  },
+  {
+    label: "Team Activity",
+    url: "assignments/week7/hiking-complete.html",
+  },
 ];
 
 // fill list with array items
