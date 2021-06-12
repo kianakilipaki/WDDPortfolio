@@ -49,8 +49,20 @@ const links = [
     url: "assignments/week7/notes.txt",
   },
   {
-    label: "Team Activity",
+    label: "Week7 Team Activity",
     url: "assignments/week7/hiking-complete.html",
+  },
+  {
+    label: "Week8 Notes",
+    url: "assignments/week8/notes.txt",
+  },
+  {
+    label: "Week8 Team Activity",
+    url: "assignments/week8/tp_08/index.html",
+  },
+  {
+    label: "Pokemon List",
+    url: "assignments/week8/poke.html",
   },
 ];
 

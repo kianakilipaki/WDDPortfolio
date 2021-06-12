@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon World</title>
+    <style>
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        margin: 0;
+        text-align: center;
+      }
+      h1 {
+        background: red;
+        margin: 0;
+        padding: 20px;
+        border-bottom: 20px solid black;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      li {
+        font-variant: small-caps;
+        font-weight: bold;
+        list-style: none;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 5px solid black;
+        border-radius: 100%;
+        box-shadow: 3px 3px 5px gray;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      a:hover {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Pokemon List</h1>
+      <ul id="poke-list"></ul>
+      <button id="next">Next</button>
+      <button id="prev">Previous</button>
+    </main>
+    <script type="text/javascript">
+      const baseURL = "https://pokeapi.co/api/v2/";
+      const parent = document.getElementById("poke-list");
+      const nextbutton = document.getElementById("next");
+      const prevbutton = document.getElementById("prev");
+      var pokeList;
+
+      function getPokelist(url) {
+        fetch(url)
+          .then((response) => response.json())
+          .then((result) => {
+            pokelist = result;
+            fillList(pokelist);
+            console.log(pokelist);
+          })
+          .catch((error) => console.log("error", error));
+      }
+
+      function fillList(pokelist) {
+        parent.innerHTML = "";
+        for (pokemon in pokelist.results) {
+          let item = document.createElement("li");
+          let link = document.createElement("a");
+          link.setAttribute("href", pokelist.results[pokemon].url);
+          link.innerHTML = pokelist.results[pokemon].name;
+          item.appendChild(link);
+          parent.appendChild(item);
+        }
+      }
+      function nextbtn(e) {
+        getPokelist(pokelist.next);
+      }
+      function previousbtn(e) {
+        getPokelist(pokelist.previous);
+      }
+      function addButtonListener() {
+        nextbutton.addEventListener("click", nextbtn, false);
+        prevbutton.addEventListener("click", previousbtn, false);
+      }
+
+      window.addEventListener("load", () => {
+        getPokelist(baseURL + "pokemon/");
+        addButtonListener();
+      });
+    </script>
+  </body>
+</html>
