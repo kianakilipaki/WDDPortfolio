@@ -64,6 +64,7 @@ const links = [
     label: "Pokemon List",
     url: "assignments/week8/poke.html",
   },
+  {
     label: "Week9 Notes",
     url: "assignments/week9/notes.txt",
   },
