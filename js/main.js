@@ -64,6 +64,13 @@ const links = [
     label: "Pokemon List",
     url: "assignments/week8/poke.html",
   },
+    label: "Week9 Notes",
+    url: "assignments/week9/notes.txt",
+  },
+  {
+    label: "Drums",
+    url: "assignments/week9/01 - JavaScript Drum Kit/index.html",
+  },
 ];
 
 // fill list with array items
