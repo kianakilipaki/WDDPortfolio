@@ -72,6 +72,18 @@ const links = [
     label: "Drums",
     url: "assignments/week9/01 - JavaScript Drum Kit/index.html",
   },
+  {
+    label: "Week10 Notes",
+    url: "assignments/week10/notes.txt",
+  },
+  {
+    label: "Earthquake Data",
+    url: "assignments/week10/earthquakeWatch/index.html",
+  },
+  {
+    label: "Daily Spacer begins",
+    url: "assignments/dailySpace/index.html",
+  },
 ];
 
 // fill list with array items
