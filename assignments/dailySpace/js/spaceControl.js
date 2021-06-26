@@ -1,21 +1,24 @@
 import spaceModel from "./spaceModel.js";
+import spaceView from "./spaceView.js";
 
 // Space Mission Control Center
 class spaceController {
   constructor(parent) {
     this.parent = document.getElementById(parent);
     this.spaceStuff = new spaceModel();
+    this.spaceView = new spaceView();
   }
 
   async init() {
     this.parent.innerHTML = "Loading...";
     // get daily image
-    const dailyImg = await this.spaceStuff.getDailySpaceStuff();
+    const imgDetails = await this.spaceStuff.getDailySpaceStuff();
     // render landing page
-    console.log(dailyImg);
+    this.spaceView.renderSpaceImg(imgDetails, this.parent);
+    // save to LocalStorage
+    this.spaceStuff.saveToLS(imgDetails);
   }
 }
 
 const space = new spaceController("main-container");
-
 window.addEventListener("load", space.init());

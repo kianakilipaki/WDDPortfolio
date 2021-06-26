@@ -26,9 +26,6 @@ export default class QuakesController {
         const loc = await getLocation();
         this.position.lat = loc.coords.latitude;
         this.position.lon = loc.coords.longitude;
-        console.log(this.position);
-        // try to get the position using getLocation()
-        // if we get the location back then set the latitude and longitude into this.position
       } catch (error) {
         console.log(error);
       }
@@ -44,18 +41,16 @@ export default class QuakesController {
       this.position,
       100
     );
-    console.log(quakeList);
     // render the list to html
     this.quakesView.renderQuakeList(quakeList, this.parentElement);
     // add a listener to the new list of quakes to allow drill down in to the details
-    this.parentElement.addEventListener("touchend", (e) => {
+    this.parentElement.addEventListener("click", (e) => {
       this.getQuakeDetails(e.target.dataset.id);
     });
   }
   async getQuakeDetails(quakeId) {
     const quake = this.quakes.getQuakeById(quakeId);
     this.quakesView.renderQuake(quake, this.parentElement);
-    // get the details for the quakeId provided from the model, then send them to the view to be displayed
   }
 }
 
