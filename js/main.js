@@ -84,6 +84,14 @@ const links = [
     label: "Daily Spacer begins",
     url: "assignments/dailySpace/index.html",
   },
+  {
+    label: "Week11 Team Activity",
+    url: "assignments/week11/json-server/client/week11.html",
+  },
+  {
+    label: "Daily Spacer Progresses",
+    url: "assignments/dailySpace/index.html",
+  },
 ];
 
 // fill list with array items

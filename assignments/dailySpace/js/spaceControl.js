@@ -3,8 +3,9 @@ import spaceView from "./spaceView.js";
 
 // Space Mission Control Center
 class spaceController {
-  constructor(parent) {
-    this.parent = document.getElementById(parent);
+  constructor() {
+    this.parent = document.getElementById("spaceContainer");
+    this.nav = document.getElementById("spaceNav");
     this.spaceStuff = new spaceModel();
     this.spaceView = new spaceView();
   }
@@ -14,11 +15,17 @@ class spaceController {
     // get daily image
     const imgDetails = await this.spaceStuff.getDailySpaceStuff();
     // render landing page
-    this.spaceView.renderSpaceImg(imgDetails, this.parent);
+    this.spaceView.renderMainView(imgDetails, this.parent);
     // save to LocalStorage
-    this.spaceStuff.saveToLS(imgDetails);
+    this.spaceStuff.addToSpaceRay(imgDetails);
+    // add menu items from LS if there are any.
+    this.addMenu();
+  }
+  async addMenu() {
+    const list = await this.spaceStuff.getFromLS();
+    this.spaceView.renderSpaceNav(list, this.nav);
   }
 }
 
-const space = new spaceController("main-container");
+const space = new spaceController();
 window.addEventListener("load", space.init());

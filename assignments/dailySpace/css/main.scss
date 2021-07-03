@@ -1,3 +1,6 @@
-body {
-  background: no-repeat;
-}
+// Main Space Styles here
+
+@import "base";
+@import "nav";
+@import "layouts";
+@import "components";

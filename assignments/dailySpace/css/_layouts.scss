@@ -1,0 +1,32 @@
+// Space layouts here
+img {
+  width: 100%;
+}
+
+.panel {
+  width: 100%;
+  position: fixed;
+  bottom: -5px;
+  left: 0px;
+}
+.imgDetails {
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: $blue-o;
+  border-radius: 25px 25px 0 0;
+  border: 1px solid $light-blue;
+  box-shadow: 0px 0px 10px $light-blue;
+  color: $light;
+  h3 {
+    font-style: italic;
+    padding: 10px 0;
+    color: $light-blue;
+  }
+  h1 {
+    color: $red;
+  }
+  h5 {
+    font-weight: lighter;
+  }
+}
