@@ -16,16 +16,30 @@ class spaceController {
     const imgDetails = await this.spaceStuff.getDailySpaceStuff();
     // render landing page
     this.spaceView.renderMainView(imgDetails, this.parent);
-    // save to LocalStorage
-    this.spaceStuff.addToSpaceRay(imgDetails);
-    // add menu items from LS if there are any.
+    // add random menu items
     this.addMenu();
   }
   async addMenu() {
-    const list = await this.spaceStuff.getFromLS();
-    this.spaceView.renderSpaceNav(list, this.nav);
+    const spaceRay = await this.spaceStuff.getRandomSpacer();
+    this.spaceView.renderSpaceNav(spaceRay, this.nav, this.parent);
+    await this.addToggles();
+  }
+  async addToggles() {
+    const menuToggle = document.querySelector(".nav-arrow");
+    const menu = document.querySelector("#spaceNav");
+    const detailsToggle = document.querySelector(".arrow");
+    const details = document.querySelector(".imgDetails");
+
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      menu.classList.toggle("active");
+    });
+    detailsToggle.addEventListener("click", () => {
+      detailsToggle.classList.toggle("active");
+      details.classList.toggle("active");
+    });
   }
 }
 
 const space = new spaceController();
-window.addEventListener("load", space.init());
+space.init();

@@ -13,14 +13,27 @@
 $red: #e6460e;
 $light: #f0f0f0;
 $dark-red: #4e1e13;
+$dark: rgb(35, 34, 37);
 $blue: #334b5a;
 $blue-o: #334b5acb;
 $light-blue: #addbed;
 
 body {
   font-family: "Nanum Gothic", sans-serif;
+  background: $dark;
+  color: $light;
 }
 
 h1 {
   font-family: "Do Hyeon", sans-serif;
+  color: $red;
+}
+h3,
+h4 {
+  font-style: italic;
+  padding: 10px 0;
+  color: $light-blue;
+}
+h5 {
+  font-weight: lighter;
 }

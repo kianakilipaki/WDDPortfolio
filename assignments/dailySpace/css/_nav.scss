@@ -1,40 +1,32 @@
 // Space Mission Navigation here
-
-body {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-}
 #spaceNav {
-  grid-column: 1;
-  //   list-style: none;
-  //   text-align: center;
-  //   background-color: $blue;
-  //   position: relative;
-  //   max-height: 100%;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   width: 250px;
-  //   z-index: 5;
-  //   li {
-  //     padding: 10px 20px;
-  //     overflow: auto;
-  //     color: $light;
-  //   }
-  //   li:hover {
-  //     background: $light-blue;
-  //     color: $blue;
-  //   }
+  background-color: $blue-o;
+  position: absolute;
+  top: -40%;
+  padding: 40px 20px;
+  width: 100%;
+  z-index: 9;
+  transition: 300ms top cubic-bezier(0.77, 0, 0.175, 1);
+  text-align: center;
+  li {
+    list-style: none;
+    padding: 10px 20px;
+    color: $light;
+  }
+  li:hover {
+    background: $light-blue;
+    color: $blue;
+    cursor: pointer;
+  }
+  li:active {
+    background: $light;
+  }
+  &.active {
+    top: 0px;
+  }
 }
-
-#spaceContainer {
-  grid-column: 2;
-  //   top: 0;
-  //   bottom: 0;
-  //   position: absolute;
-  //   right: 0;
-  //   left: 0;
-  //   background-color: rgb(27, 27, 27);
-  //   z-index: 2;
-  //   transition: transform 0.5s ease-in-out;
+.nav-arrow {
+  &.active {
+    transform: rotate(225deg);
+  }
 }
