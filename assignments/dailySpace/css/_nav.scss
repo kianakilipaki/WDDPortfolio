@@ -1,16 +1,16 @@
 // Space Mission Navigation here
 #spaceNav {
   background-color: $blue-o;
-  position: absolute;
-  top: -40%;
-  padding: 40px 20px;
+  position: fixed;
+  top: -50%;
+  padding: 2em 1em;
   width: 100%;
   z-index: 9;
   transition: 300ms top cubic-bezier(0.77, 0, 0.175, 1);
   text-align: center;
   li {
     list-style: none;
-    padding: 10px 20px;
+    padding: 0.5em 1em;
     color: $light;
   }
   li:hover {

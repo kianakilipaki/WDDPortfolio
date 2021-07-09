@@ -19,6 +19,7 @@ $blue-o: #334b5acb;
 $light-blue: #addbed;
 
 body {
+  font-size: 18px;
   font-family: "Nanum Gothic", sans-serif;
   background: $dark;
   color: $light;
@@ -31,9 +32,19 @@ h1 {
 h3,
 h4 {
   font-style: italic;
-  padding: 10px 0;
+  padding: 0.5em 0;
   color: $light-blue;
 }
 h5 {
   font-weight: lighter;
+}
+@media only screen and (max-width: 800px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: 14px;
+  }
 }

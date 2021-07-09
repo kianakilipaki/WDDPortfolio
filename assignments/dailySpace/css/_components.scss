@@ -4,8 +4,8 @@
 .nav-arrow {
   position: fixed;
   left: 50%;
-  width: 20px;
-  height: 20px;
+  width: 1em;
+  height: 1em;
   border-right: 2px solid $light-blue;
   border-bottom: 2px solid $light-blue;
   cursor: pointer;
@@ -14,10 +14,10 @@
 div.arrow {
   transform: rotate(225deg);
   transition: 300ms bottom cubic-bezier(0.77, 0, 0.175, 1);
-  bottom: 15px;
+  bottom: 0.75em;
 }
 div.nav-arrow {
-  top: 15px;
+  top: 0.75em;
   transition: 300ms top cubic-bezier(0.77, 0, 0.175, 1);
   transform: rotate(45deg);
 }

@@ -1,36 +1,32 @@
 // Space Mission View
 export default class spaceView {
-  renderMainView(spaceDetails, element) {
-    element.innerHTML =
-      this.renderSpaceImg(spaceDetails.hdurl) +
-      this.renderSpaceInfo(spaceDetails);
+  renderMainView(spaceDetails, img, details) {
+    console.log(spaceDetails.hdurl);
+    img.innerHTML = this.renderSpaceImg(spaceDetails.hdurl);
+    details.innerHTML = this.renderSpaceInfo(spaceDetails);
   }
   renderSpaceImg(url) {
-    return `<div class="img-container">
-      <img class="fill" src="${url}">
-      </div>`;
+    return `<img class="fill" src="${url}">`;
   }
   renderSpaceInfo(details) {
     if (details.copyright == undefined) {
       details.copyright = "Unknown";
     }
     const item =
-      `<div class="arrow"></div>` +
-      `<div class="imgDetails">` +
       `<h1>${details.title}</h1>` +
       `<h5>${details.date}</h5>` +
       `<h3>${details.copyright}</h3>` +
-      `<p>${details.explanation}</p></div>`;
+      `<p>${details.explanation}</p>`;
     return item;
   }
-  renderSpaceNav(list, nav, parent) {
+  renderSpaceNav(list, nav, img, details) {
     nav.innerHTML =
       `<h1>Want More?</h1>` + `<h4>Here are five random Space photos:</h4>`;
-    list.forEach((element) => {
+    list.forEach((e) => {
       let item = document.createElement("li");
-      item.innerHTML = `${element.title}`;
+      item.innerHTML = `${e.title}`;
       item.addEventListener("click", () => {
-        this.renderMainView(element, parent);
+        this.renderMainView(e, img, details);
       });
       return nav.appendChild(item);
     });

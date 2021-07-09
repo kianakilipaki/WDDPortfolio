@@ -1,0 +1,20 @@
+@media only screen and (max-width: 500px) {
+  .zoom-out {
+    width: 100%;
+  }
+  #imgDetails {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2em;
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    background-color: $blue;
+  }
+  .arrow {
+    display: none;
+  }
+}

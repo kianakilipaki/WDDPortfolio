@@ -1,28 +1,30 @@
 // Space layouts here
-.img-container {
-  background: $dark;
-  img {
-    width: 100%;
-  }
+
+.fill {
+  width: 100%;
 }
-.imgDetails {
+.zoom-out {
+  margin: auto;
+  width: 35%;
+}
+#imgDetails {
   position: fixed;
-  bottom: -50%;
+  bottom: -60em;
   left: 10%;
   width: 80%;
   margin: 0 auto;
-  padding: 50px;
+  padding: 2.5em;
   background-color: $blue-o;
   border-radius: 25px 25px 0 0;
-  border: 1px solid $light-blue;
-  box-shadow: 0px 0px 10px $light-blue;
+  border: 0.02em solid $light-blue;
+  box-shadow: 0 0 0.5em $light-blue;
   transition: 300ms bottom cubic-bezier(0.77, 0, 0.175, 1);
   &.active {
-    bottom: -2px;
+    bottom: -0.5em;
   }
 }
 .arrow {
   &.active {
-    transform: rotate(25deg);
+    transform: rotate(45deg);
   }
 }

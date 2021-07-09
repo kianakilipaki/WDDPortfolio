@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Nanum Gothic", sans-serif;
+  background: #232225;
+  color: #f0f0f0;
+}
+
+h1 {
+  font-family: "Do Hyeon", sans-serif;
+  color: #e6460e;
+}
+
+h3,
+h4 {
+  font-style: italic;
+  padding: 0.5em 0;
+  color: #addbed;
+}
+
+h5 {
+  font-weight: lighter;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+.arrow,
+.nav-arrow {
+  position: fixed;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  border-right: 2px solid #addbed;
+  border-bottom: 2px solid #addbed;
+  cursor: pointer;
+  z-index: 10;
+}
+
+div.arrow {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  -webkit-transition: 300ms bottom cubic-bezier(0.77, 0, 0.175, 1);
+  transition: 300ms bottom cubic-bezier(0.77, 0, 0.175, 1);
+  bottom: 0.75em;
+}
+
+div.nav-arrow {
+  top: 0.75em;
+  -webkit-transition: 300ms top cubic-bezier(0.77, 0, 0.175, 1);
+  transition: 300ms top cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#spaceNav {
+  background-color: #334b5acb;
+  position: fixed;
+  top: -50%;
+  padding: 2em 1em;
+  width: 100%;
+  z-index: 9;
+  -webkit-transition: 300ms top cubic-bezier(0.77, 0, 0.175, 1);
+  transition: 300ms top cubic-bezier(0.77, 0, 0.175, 1);
+  text-align: center;
+}
+
+#spaceNav li {
+  list-style: none;
+  padding: 0.5em 1em;
+  color: #f0f0f0;
+}
+
+#spaceNav li:hover {
+  background: #addbed;
+  color: #334b5a;
+  cursor: pointer;
+}
+
+#spaceNav li:active {
+  background: #f0f0f0;
+}
+
+#spaceNav.active {
+  top: 0px;
+}
+
+.nav-arrow.active {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.fill {
+  width: 100%;
+}
+
+.zoom-out {
+  margin: auto;
+  width: 35%;
+}
+
+#imgDetails {
+  position: fixed;
+  bottom: -60em;
+  left: 10%;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2.5em;
+  background-color: #334b5acb;
+  border-radius: 25px 25px 0 0;
+  border: 0.02em solid #addbed;
+  -webkit-box-shadow: 0 0 0.5em #addbed;
+          box-shadow: 0 0 0.5em #addbed;
+  -webkit-transition: 300ms bottom cubic-bezier(0.77, 0, 0.175, 1);
+  transition: 300ms bottom cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#imgDetails.active {
+  bottom: -0.5em;
+}
+
+.arrow.active {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 500px) {
+  .zoom-out {
+    width: 100%;
+  }
+  #imgDetails {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2em;
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: #334b5a;
+  }
+  .arrow {
+    display: none;
+  }
+}
+/*# sourceMappingURL=index.css.map */
