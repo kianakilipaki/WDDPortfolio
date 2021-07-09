@@ -36,10 +36,18 @@ class spaceController {
       menuToggle.classList.toggle("active");
       menu.classList.toggle("active");
     });
+    menuToggle.addEventListener("touchend", () => {
+      menuToggle.classList.toggle("active");
+      menu.classList.toggle("active");
+    });
     zoom.addEventListener("click", () => {
       zoom.classList.toggle("zoom-out");
     });
     menu.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      menu.classList.toggle("active");
+    });
+    menu.addEventListener("touchend", () => {
       menuToggle.classList.toggle("active");
       menu.classList.toggle("active");
     });
