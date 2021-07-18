@@ -1,8 +1,8 @@
 // Space Mission Navigation here
-.links-container {
+#spaceNav {
   background-color: $blue-o;
   position: fixed;
-  right: -100vw;
+  top: -100vw;
   padding: 2em 1em;
   width: 100vw;
   z-index: 9;
@@ -22,7 +22,7 @@
     background: $light;
   }
   &.active {
-    right: 0px;
+    top: 0px;
   }
 }
 .nav-arrow {

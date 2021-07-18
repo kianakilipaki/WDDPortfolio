@@ -1,23 +1,31 @@
 // Space components found here
 
-.arrow,
-.nav-arrow {
+.logo {
   position: fixed;
-  left: 50%;
-  width: 1em;
-  height: 1em;
-  border-right: 2px solid $light-blue;
-  border-bottom: 2px solid $light-blue;
+  padding: 2vw;
+  z-index: 99;
+  width: 35vw;
+  max-width: 180px;
+  cursor: pointer;
+}
+.arrow {
+  position: fixed;
+  left: 50vw;
+  bottom: 3vw;
+  max-width: 40px;
   cursor: pointer;
   z-index: 10;
-}
-div.arrow {
-  transform: rotate(225deg);
   transition: 300ms bottom cubic-bezier(0.77, 0, 0.175, 1);
-  bottom: 0.75em;
+  &.active {
+    bottom: 0;
+  }
 }
-div.nav-arrow {
-  top: 0.75em;
-  transition: 300ms top cubic-bezier(0.77, 0, 0.175, 1);
-  transform: rotate(45deg);
+.menu {
+  position: fixed;
+  top: 5vw;
+  right: 5vw;
+  max-width: 30px;
+  &.active {
+    right: -10vw;
+  }
 }

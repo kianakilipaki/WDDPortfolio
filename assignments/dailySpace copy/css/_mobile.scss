@@ -1,10 +1,13 @@
 @media only screen and (max-width: 560px) {
-  .img-container img {
-    &.active {
-      width: 100%;
+  #logo {
+    img {
+      width: 25vw;
     }
   }
-  .details-container {
+  .zoom-out {
+    width: 100%;
+  }
+  #imgDetails {
     position: relative;
     top: 0;
     left: 0;

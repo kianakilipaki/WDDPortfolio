@@ -1,0 +1,33 @@
+// Space components found here
+
+#logo {
+  position: fixed;
+  opacity: 0.8;
+  padding: 20px;
+  z-index: 99;
+  max-width: 150px;
+  img {
+    width: 100%;
+  }
+}
+.arrow,
+.nav-arrow {
+  position: fixed;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  border-right: 2px solid $light-blue;
+  border-bottom: 2px solid $light-blue;
+  cursor: pointer;
+  z-index: 10;
+}
+div.arrow {
+  transform: rotate(225deg);
+  transition: 300ms bottom cubic-bezier(0.77, 0, 0.175, 1);
+  bottom: 0.75em;
+}
+div.nav-arrow {
+  top: 0.75em;
+  transition: 300ms top cubic-bezier(0.77, 0, 0.175, 1);
+  transform: rotate(45deg);
+}
