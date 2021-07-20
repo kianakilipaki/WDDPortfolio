@@ -89,7 +89,7 @@ const links = [
     url: "assignments/week11/json-server/client/week11.html",
   },
   {
-    label: "Daily Spacer Progresses",
+    label: "Daily Spacer Challenge",
     url: "assignments/dailySpace/index.html",
   },
 ];
