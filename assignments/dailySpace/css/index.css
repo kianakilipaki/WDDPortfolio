@@ -52,8 +52,7 @@ h5 {
   position: fixed;
   padding: 2vw;
   z-index: 99;
-  width: 35vw;
-  max-width: 200px;
+  width: 200px;
   cursor: pointer;
 }
 
@@ -211,13 +210,25 @@ body {
   max-width: 100vw;
 }
 
+.img-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
 .img-container img {
+  display: block;
+  margin: auto;
   width: 100vw;
 }
 
 .img-container img.active {
-  margin: auto;
+  margin: 0 auto;
   width: 50vw;
+}
+
+.img-container img.xz {
+  width: 200vw;
 }
 
 .img-container iframe {
@@ -246,8 +257,11 @@ body {
 }
 
 @media only screen and (max-width: 560px) {
-  .img-container img.active {
-    width: 100%;
+  .logo {
+    width: 100px;
+  }
+  .img-container {
+    height: auto;
   }
   .details-container {
     position: relative;

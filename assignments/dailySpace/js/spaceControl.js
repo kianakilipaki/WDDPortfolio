@@ -39,7 +39,7 @@ class spaceController {
   addEvents() {
     document.addEventListener("click" || "touchend", async (e) => {
       const clicked = e.path[0];
-      console.log(e.path[0].classList[0]);
+      console.log(e);
       switch (e.path[0].classList[0]) {
         // add logo event, back to daily
         case "logo":
@@ -89,8 +89,19 @@ class spaceController {
           break;
         // add zoom image event
         case "zoom":
-          clicked.classList.toggle("active");
-          break;
+          if (e.path[0].classList[1] == "active") {
+            if (e.path[0].classList[2] == "xz") {
+              clicked.classList.toggle("active");
+              clicked.classList.toggle("xz");
+              break;
+            } else {
+              clicked.classList.toggle("xz");
+              break;
+            }
+          } else {
+            clicked.classList.toggle("active");
+            break;
+          }
         // add slide details into view event
         case "arrow":
           clicked.classList.toggle("switch");
