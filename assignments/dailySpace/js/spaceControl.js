@@ -107,10 +107,6 @@ class spaceController {
           clicked.classList.toggle("switch");
           this.detailsParent.classList.toggle("active");
           break;
-        // add slide details out of view event
-        case "details-container":
-          clicked.classList.toggle("active");
-          break;
         default:
           break;
       }
