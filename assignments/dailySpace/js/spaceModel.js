@@ -32,6 +32,10 @@ export default class spaceModel {
   }
   // save favorite to localstorage
   saveFavorites(fav) {
+    var star = {
+      isStarred: true,
+    };
+    Object.assign(fav, star);
     this.favs.push(fav);
     localStorage.setItem("spaceFavs", JSON.stringify(this.favs));
   }
@@ -47,7 +51,6 @@ export default class spaceModel {
         favItem = item;
       }
     });
-    console.log(favItem);
     return favItem;
   }
   // delete one specific favorite from localstorage
@@ -56,10 +59,10 @@ export default class spaceModel {
     this.favs.forEach((item) => {
       if (item.title == name) {
         favItem = item;
+        console.log(favItem);
       }
     });
-    console.log(favItem);
-    this.favs.splice(favItem, 1);
+    this.favs.splice(favItem - 1, 1);
     localStorage.setItem("spaceFavs", JSON.stringify(this.favs));
   }
 }

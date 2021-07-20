@@ -5,7 +5,7 @@
   padding: 2vw;
   z-index: 99;
   width: 35vw;
-  max-width: 180px;
+  max-width: 200px;
   cursor: pointer;
 }
 .arrow {
@@ -15,17 +15,74 @@
   max-width: 40px;
   cursor: pointer;
   z-index: 10;
+  transform: rotate(180deg);
   transition: 300ms bottom cubic-bezier(0.77, 0, 0.175, 1);
-  &.active {
-    bottom: 0;
+  &.switch {
+    position: relative;
+    transform: rotate(0deg);
+    left: 50%;
   }
 }
 .menu {
+  cursor: pointer;
   position: fixed;
-  top: 5vw;
-  right: 5vw;
+  top: 30px;
+  right: 30px;
   max-width: 30px;
   &.active {
-    right: -10vw;
+    display: none;
+  }
+}
+.x {
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+.randomizer {
+  cursor: pointer;
+  margin: 60px auto;
+  color: $light;
+  font-weight: bold;
+  background: $blue-o;
+  border: 2px solid $light-blue;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.share {
+  cursor: pointer;
+  fill: red;
+  width: 25px;
+  margin: -15px 20px;
+  float: right;
+  &:hover {
+    color: $light-blue;
+  }
+}
+.shareOptions {
+  display: none;
+  margin: 20px;
+  float: right;
+  &.active {
+    display: block;
+  }
+}
+.star {
+  margin: -30px -15px;
+  color: $light;
+  cursor: pointer;
+  font-size: 35px;
+  float: right;
+  &:hover {
+    color: $light-blue;
+  }
+  &.starred {
+    color: red;
   }
 }

@@ -1,0 +1,41 @@
+// Space Mission Navigation here
+.links-container {
+  background-color: $blue;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: -100vw;
+  padding: 1em;
+  width: 100vw;
+  height: 100vh;
+  max-width: 400px;
+  z-index: 99;
+  transition: 300ms right cubic-bezier(0.77, 0, 0.175, 1);
+  text-align: left;
+  overflow-y: scroll;
+  .favsList {
+    position: relative;
+    overflow: auto;
+  }
+  h2 {
+    margin: 10px;
+  }
+  li {
+    border-top: 1px solid $light-blue;
+    list-style: none;
+    padding: 1em;
+    color: $light;
+  }
+  li:hover {
+    background: $light-blue;
+    color: $blue;
+    cursor: pointer;
+  }
+  li:active {
+    background: $light;
+  }
+  &.active {
+    right: 0px;
+  }
+}

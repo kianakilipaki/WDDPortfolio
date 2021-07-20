@@ -15,8 +15,9 @@ $light: #f0f0f0;
 $dark-red: #4e1e13;
 $dark: rgb(35, 34, 37);
 $blue: #334b5a;
-$blue-o: #334b5ad3;
+$blue-o: #334b5ade;
 $light-blue: #addbed;
+$font: "Do Hyeon", sans-serif;
 
 body {
   font-size: 18px;
@@ -27,7 +28,8 @@ body {
 .color {
   opacity: 0.8;
 }
-h1 {
+h1,
+h2 {
   font-family: "Do Hyeon", sans-serif;
   color: $red;
 }
