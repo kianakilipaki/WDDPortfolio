@@ -16,7 +16,7 @@ body {
 }
 
 .color {
-  opacity: 0.8;
+  opacity: #f0f0f0ec;
 }
 
 h1,
@@ -138,6 +138,7 @@ h5 {
 .star {
   margin: -30px -15px;
   color: #f0f0f0;
+  opacity: 0.8;
   cursor: pointer;
   font-size: 35px;
   float: right;

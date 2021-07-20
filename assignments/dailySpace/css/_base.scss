@@ -12,6 +12,7 @@
 
 $red: #e6460e;
 $light: #f0f0f0;
+$light-o: #f0f0f0ec;
 $dark-red: #4e1e13;
 $dark: rgb(35, 34, 37);
 $blue: #334b5a;
@@ -26,7 +27,7 @@ body {
   color: $light;
 }
 .color {
-  opacity: 0.8;
+  opacity: $light-o;
 }
 h1,
 h2 {
