@@ -11,6 +11,7 @@ export default class spaceView {
     imgParent.innerHTML = this.renderSpaceImg(details);
     detailsParent.innerHTML = this.renderSpaceInfo(details);
     detailsParent.classList.remove("active");
+    linkParent.classList.remove("active");
     linkParent.innerHTML = this.renderSpaceLinks();
   }
   // render space image or video
